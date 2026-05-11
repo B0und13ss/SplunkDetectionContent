@@ -1,0 +1,25 @@
+title: LOLGlob in PowerShell Script Block
+id: 6f8069ae-ae92-4815-8f2e-354865b36ce5
+status: test
+description: |
+    Glob patters are a way malicious actors can evade detection. This analytic will review PowerShell script blocks to see if this is occurring.
+    By checking for the use of Get-Command or Get-Alias and their respective aliases, tied with and wild card that is valid for these shells we |
+    can alert on the activity. This alert has NOT been tested extensively.
+author: Ian Dougherty [@B0und13ss]
+references:
+    - https://0xv1n.github.io/LOLGlobs/about
+date: 2026-05-11
+modified: 2026-05-11
+tags:
+    - attack.execution
+    - attack.t1059.001
+logsource:
+    product: windows
+    service: ps_script
+detection:
+    selection:
+        CommandLine|re|i: (?i)(gcm\b|gal\b|get-command\b|get-alias\b|getcommand|getalias|\bdir\b|\bfor\b|\bforfiles\b).*([\*\?\`\[\{])
+    condition: selection
+falsepositives:
+    - Unlikely
+level: high
