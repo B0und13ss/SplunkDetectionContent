@@ -1,5 +1,5 @@
 title: LOLGlob in PowerShell Script Block
-id: 6f8069ae-ae92-4815-8f2e-354865b36ce5
+id: 9ec056fe-849b-4078-9f55-b1423c855d28
 status: test
 description: |
     Glob patters are a way malicious actors can evade detection. This analytic will review PowerShell script blocks to see if this is occurring.
