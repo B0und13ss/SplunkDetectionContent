@@ -22,9 +22,9 @@ detection:
         - Image|endswith:
             - 'powershell.exe'
             - 'cmd.exe'
-    selection_cli:
-        CommandLine|re|i: (\(gcm|gal|Get-Command|Get-Alias|get-command|get-alias|where|dir)(.*[\*\?\[\]\{\}].*\))
-    condition: all of selection_*
+    selection_cli1:
+        CommandLine|re|i: (?i)(gcm\b|gal\b|get-command\b|get-alias\b|getcommand|getalias|\bdir\b|\bfor\b|\bforfiles\b).*([\*\?\`\[\{])
+    condition: all of selection_cli*
 falsepositives:
     - Unlikely
 level: high
