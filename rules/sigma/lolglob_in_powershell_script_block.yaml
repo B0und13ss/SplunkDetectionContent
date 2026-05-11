@@ -16,6 +16,7 @@ tags:
 logsource:
     product: windows
     service: ps_script
+    definition: You need to have Script Block logging enabled in Audit Policy
 detection:
     selection:
         CommandLine|re|i: (?i)(gcm\b|gal\b|get-command\b|get-alias\b|getcommand|getalias|\bdir\b|\bfor\b|\bforfiles\b).*([\*\?\`\[\{])
