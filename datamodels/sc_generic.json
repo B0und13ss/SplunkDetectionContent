@@ -1,0 +1,257 @@
+{
+  "modelName": "sc_generic",
+  "displayName": "sc_generic",
+  "description": "This is for use in the SOC Content App. This datamodel is used when their is no category in the sigma rule.",
+  "objectSummary": {
+    "Event-Based": 1,
+    "Transaction-Based": 0,
+    "Search-Based": 0
+  },
+  "objects": [
+    {
+      "objectName": "win_security",
+      "displayName": "win_security",
+      "parentName": "BaseEvent",
+      "comment": "",
+      "fields": [
+        {
+          "fieldName": "EventCode",
+          "owner": "win_security",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "EventCode",
+          "comment": ""
+        },
+        {
+          "fieldName": "Authentication_Package",
+          "owner": "win_security",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "Authentication_Package",
+          "comment": ""
+        },
+        {
+          "fieldName": "Impersonation_Level",
+          "owner": "win_security",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "Impersonation_Level",
+          "comment": ""
+        },
+        {
+          "fieldName": "Logon_Process",
+          "owner": "win_security",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "Logon_Process",
+          "comment": ""
+        },
+        {
+          "fieldName": "Logon_Type",
+          "owner": "win_security",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "Logon_Type",
+          "comment": ""
+        },
+        {
+          "fieldName": "ComputerName",
+          "owner": "win_security",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ComputerName",
+          "comment": ""
+        },
+        {
+          "fieldName": "_time",
+          "owner": "BaseEvent",
+          "type": "timestamp",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "host",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "host",
+          "comment": ""
+        },
+        {
+          "fieldName": "source",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "source",
+          "comment": ""
+        },
+        {
+          "fieldName": "sourcetype",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "sourcetype",
+          "comment": ""
+        }
+      ],
+      "calculations": [
+        {
+          "outputFields": [
+            {
+              "fieldName": "EventID",
+              "owner": "win_security",
+              "type": "number",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "EventID",
+              "comment": ""
+            }
+          ],
+          "calculationID": "tpexuvpohkk",
+          "owner": "win_security",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "EventCode"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "LogonType",
+              "owner": "win_security",
+              "type": "number",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "LogonType",
+              "comment": ""
+            }
+          ],
+          "calculationID": "n50b3368mgc",
+          "owner": "win_security",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "Logon_Type"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "LogonProcessName",
+              "owner": "win_security",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "LogonProcessName",
+              "comment": ""
+            }
+          ],
+          "calculationID": "j6gni8eckrg",
+          "owner": "win_security",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "Logon_Process"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "AuthenticationPackageName",
+              "owner": "win_security",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "AuthenticationPackageName",
+              "comment": ""
+            }
+          ],
+          "calculationID": "3jtwc4etenh",
+          "owner": "win_security",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "Authentication_Package"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "ImpersonationLevel",
+              "owner": "win_security",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "ImpersonationLevel",
+              "comment": ""
+            }
+          ],
+          "calculationID": "lq94nlae1ia",
+          "owner": "win_security",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Eval",
+          "expression": "Impersonation_Level"
+        }
+      ],
+      "constraints": [
+        { "search": "index=win_security", "owner": "win_security" }
+      ],
+      "lineage": "win_security"
+    }
+  ],
+  "objectNameList": ["win_security"]
+}
