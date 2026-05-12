@@ -1,1 +1,480 @@
-{"modelName":"sc_process_creation","displayName":"sc_process_creation","description":"This is for use in the SOC Content App. This data model is used when the category of the sigma rule is \"process_creation\".","objectSummary":{"Event-Based":1,"Transaction-Based":0,"Search-Based":0},"objects":[{"objectName":"win","displayName":"win","parentName":"BaseEvent","comment":"","fields":[{"fieldName":"CommandLine","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"CommandLine","comment":""},{"fieldName":"Company","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Company","comment":""},{"fieldName":"CurrentDirectory","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"CurrentDirectory","comment":""},{"fieldName":"Description","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Description","comment":""},{"fieldName":"FileVersion","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"FileVersion","comment":""},{"fieldName":"Hashes","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Hashes","comment":""},{"fieldName":"Image","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Image","comment":""},{"fieldName":"IntegrityLevel","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"IntegrityLevel","comment":""},{"fieldName":"LogonGuid","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"LogonGuid","comment":""},{"fieldName":"LogonId","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"LogonId","comment":""},{"fieldName":"OriginalFileName","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"OriginalFileName","comment":""},{"fieldName":"ParentCommandLine","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ParentCommandLine","comment":""},{"fieldName":"ParentImage","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ParentImage","comment":""},{"fieldName":"ParentProcessGuid","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ParentProcessGuid","comment":""},{"fieldName":"ParentProcessId","owner":"win","type":"number","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ParentProcessId","comment":""},{"fieldName":"ParentUser","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ParentUser","comment":""},{"fieldName":"ProcessGuid","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ProcessGuid","comment":""},{"fieldName":"ProcessId","owner":"win","type":"number","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ProcessId","comment":""},{"fieldName":"Product","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Product","comment":""},{"fieldName":"RuleName","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"RuleName","comment":""},{"fieldName":"TerminalSessionId","owner":"win","type":"number","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"TerminalSessionId","comment":""},{"fieldName":"UtcTime","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"UtcTime","comment":""},{"fieldName":"ComputerName","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"ComputerName","comment":""},{"fieldName":"_time","owner":"BaseEvent","type":"timestamp","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"_time","comment":""},{"fieldName":"host","owner":"BaseEvent","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":true,"editable":true,"displayName":"host","comment":""},{"fieldName":"source","owner":"BaseEvent","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"source","comment":""},{"fieldName":"sourcetype","owner":"BaseEvent","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"sourcetype","comment":""}],"calculations":[{"outputFields":[{"fieldName":"Hashes_sha1","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Hashes_sha1","comment":""},{"fieldName":"Hashes_md5","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Hashes_md5","comment":""},{"fieldName":"Hashes_sha256","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Hashes_sha256","comment":""},{"fieldName":"Hashes_imphash","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"Hashes_imphash","comment":""}],"inputField":"Hashes","calculationID":"a3i0apa8d8i","owner":"win","editable":true,"comment":"","calculationType":"Rex","expression":"(?:SHA1=(?<Hashes_sha1>[A-Z0-9]+)\\,?)?(?:MD5=(?<Hashes_md5>[A-Z0-9]+)\\,?)?(?:SHA256=(?<Hashes_sha256>[A-Z0-9]+)\\,?)?(?:IMPHASH=(?<Hashes_imphash>[A-Z0-9]+)\\,?)?"},{"outputFields":[{"fieldName":"dest","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"dest","comment":""},{"fieldName":"hostname","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"hostname","comment":""},{"fieldName":"domain","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"domain","comment":""}],"inputField":"ComputerName","calculationID":"p5ikvtha03","owner":"win","editable":true,"comment":"","calculationType":"Rex","expression":"(?<dest>(?<hostname>[^\\.]+)\\.?(?<domain>[^\\n]+)?)"},{"outputFields":[{"fieldName":"User","owner":"win","type":"string","fieldSearch":"","required":false,"multivalue":false,"hidden":false,"editable":true,"displayName":"User","comment":""}],"inputField":"_raw","calculationID":"v2sgk61c15c","owner":"win","editable":true,"comment":"","calculationType":"Rex","expression":"\\bUser: (?<User>[^\\n]+)"}],"constraints":[{"search":"index=win_sysmon EventCode=1","owner":"win"}],"lineage":"win"}],"objectNameList":["win"]}
+{
+  "modelName": "sc_process_creation",
+  "displayName": "sc_process_creation",
+  "description": "This is for use in the SOC Content App. This data model is used when the category of the sigma rule is \"process_creation\".",
+  "objectSummary": {
+    "Event-Based": 1,
+    "Transaction-Based": 0,
+    "Search-Based": 0
+  },
+  "objects": [
+    {
+      "objectName": "win",
+      "displayName": "win",
+      "parentName": "BaseEvent",
+      "comment": "",
+      "fields": [
+        {
+          "fieldName": "CommandLine",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "CommandLine",
+          "comment": ""
+        },
+        {
+          "fieldName": "Company",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Company",
+          "comment": ""
+        },
+        {
+          "fieldName": "CurrentDirectory",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "CurrentDirectory",
+          "comment": ""
+        },
+        {
+          "fieldName": "Description",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Description",
+          "comment": ""
+        },
+        {
+          "fieldName": "FileVersion",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "FileVersion",
+          "comment": ""
+        },
+        {
+          "fieldName": "Hashes",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Hashes",
+          "comment": ""
+        },
+        {
+          "fieldName": "Image",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Image",
+          "comment": ""
+        },
+        {
+          "fieldName": "IntegrityLevel",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "IntegrityLevel",
+          "comment": ""
+        },
+        {
+          "fieldName": "LogonGuid",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "LogonGuid",
+          "comment": ""
+        },
+        {
+          "fieldName": "LogonId",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "LogonId",
+          "comment": ""
+        },
+        {
+          "fieldName": "OriginalFileName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "OriginalFileName",
+          "comment": ""
+        },
+        {
+          "fieldName": "ParentCommandLine",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ParentCommandLine",
+          "comment": ""
+        },
+        {
+          "fieldName": "ParentImage",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ParentImage",
+          "comment": ""
+        },
+        {
+          "fieldName": "ParentProcessGuid",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ParentProcessGuid",
+          "comment": ""
+        },
+        {
+          "fieldName": "ParentProcessId",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ParentProcessId",
+          "comment": ""
+        },
+        {
+          "fieldName": "ParentUser",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ParentUser",
+          "comment": ""
+        },
+        {
+          "fieldName": "ProcessGuid",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ProcessGuid",
+          "comment": ""
+        },
+        {
+          "fieldName": "ProcessId",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ProcessId",
+          "comment": ""
+        },
+        {
+          "fieldName": "Product",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Product",
+          "comment": ""
+        },
+        {
+          "fieldName": "RuleName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "RuleName",
+          "comment": ""
+        },
+        {
+          "fieldName": "TerminalSessionId",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "TerminalSessionId",
+          "comment": ""
+        },
+        {
+          "fieldName": "UtcTime",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "UtcTime",
+          "comment": ""
+        },
+        {
+          "fieldName": "ComputerName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ComputerName",
+          "comment": ""
+        },
+        {
+          "fieldName": "_time",
+          "owner": "BaseEvent",
+          "type": "timestamp",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "host",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "host",
+          "comment": ""
+        },
+        {
+          "fieldName": "source",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "source",
+          "comment": ""
+        },
+        {
+          "fieldName": "sourcetype",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "sourcetype",
+          "comment": ""
+        }
+      ],
+      "calculations": [
+        {
+          "outputFields": [
+            {
+              "fieldName": "Hashes_sha1",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Hashes_sha1",
+              "comment": ""
+            },
+            {
+              "fieldName": "Hashes_md5",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Hashes_md5",
+              "comment": ""
+            },
+            {
+              "fieldName": "Hashes_sha256",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Hashes_sha256",
+              "comment": ""
+            },
+            {
+              "fieldName": "Hashes_imphash",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "Hashes_imphash",
+              "comment": ""
+            }
+          ],
+          "inputField": "Hashes",
+          "calculationID": "a3i0apa8d8i",
+          "owner": "win",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "(?:SHA1=(?<Hashes_sha1>[A-Z0-9]+)\\,?)?(?:MD5=(?<Hashes_md5>[A-Z0-9]+)\\,?)?(?:SHA256=(?<Hashes_sha256>[A-Z0-9]+)\\,?)?(?:IMPHASH=(?<Hashes_imphash>[A-Z0-9]+)\\,?)?"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "dest",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "dest",
+              "comment": ""
+            },
+            {
+              "fieldName": "hostname",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "hostname",
+              "comment": ""
+            },
+            {
+              "fieldName": "domain",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "domain",
+              "comment": ""
+            }
+          ],
+          "inputField": "ComputerName",
+          "calculationID": "p5ikvtha03",
+          "owner": "win",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "(?<dest>(?<hostname>[^\\.]+)\\.?(?<domain>[^\\n]+)?)"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "User",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "User",
+              "comment": ""
+            }
+          ],
+          "inputField": "_raw",
+          "calculationID": "v2sgk61c15c",
+          "owner": "win",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "\\bUser: (?<User>[^\\n]+)"
+        }
+      ],
+      "constraints": [
+        { "search": "index=win_sysmon EventCode=1", "owner": "win" }
+      ],
+      "lineage": "win"
+    }
+  ],
+  "objectNameList": ["win"]
+}
