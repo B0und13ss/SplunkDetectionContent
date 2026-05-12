@@ -1,0 +1,362 @@
+{
+  "modelName": "sc_network_connection",
+  "displayName": "sc_network_connection",
+  "description": "This is for use in the SOC Content App. This data model is used when the category of the sigma rule is \"network_connection\".",
+  "objectSummary": {
+    "Event-Based": 1,
+    "Transaction-Based": 0,
+    "Search-Based": 0
+  },
+  "objects": [
+    {
+      "objectName": "win",
+      "displayName": "win",
+      "parentName": "BaseEvent",
+      "comment": "",
+      "fields": [
+        {
+          "fieldName": "UtcTime",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "UtcTime",
+          "comment": ""
+        },
+        {
+          "fieldName": "ComputerName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ComputerName",
+          "comment": ""
+        },
+        {
+          "fieldName": "RuleName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "RuleName",
+          "comment": ""
+        },
+        {
+          "fieldName": "DestinationHostname",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "DestinationHostname",
+          "comment": ""
+        },
+        {
+          "fieldName": "DestinationIp",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "DestinationIp",
+          "comment": ""
+        },
+        {
+          "fieldName": "DestinationIsIpv6",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "DestinationIsIpv6",
+          "comment": ""
+        },
+        {
+          "fieldName": "DestinationPort",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "DestinationPort",
+          "comment": ""
+        },
+        {
+          "fieldName": "DestinationPortName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "DestinationPortName",
+          "comment": ""
+        },
+        {
+          "fieldName": "Image",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Image",
+          "comment": ""
+        },
+        {
+          "fieldName": "Initiated",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Initiated",
+          "comment": ""
+        },
+        {
+          "fieldName": "ProcessGuid",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ProcessGuid",
+          "comment": ""
+        },
+        {
+          "fieldName": "ProcessId",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "ProcessId",
+          "comment": ""
+        },
+        {
+          "fieldName": "Protocol",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "Protocol",
+          "comment": ""
+        },
+        {
+          "fieldName": "SourceHostname",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "SourceHostname",
+          "comment": ""
+        },
+        {
+          "fieldName": "SourceIp",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "SourceIp",
+          "comment": ""
+        },
+        {
+          "fieldName": "SourceIsIpv6",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "SourceIsIpv6",
+          "comment": ""
+        },
+        {
+          "fieldName": "SourcePort",
+          "owner": "win",
+          "type": "number",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "SourcePort",
+          "comment": ""
+        },
+        {
+          "fieldName": "SourcePortName",
+          "owner": "win",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "SourcePortName",
+          "comment": ""
+        },
+        {
+          "fieldName": "_time",
+          "owner": "BaseEvent",
+          "type": "timestamp",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "_time",
+          "comment": ""
+        },
+        {
+          "fieldName": "host",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": true,
+          "editable": true,
+          "displayName": "host",
+          "comment": ""
+        },
+        {
+          "fieldName": "source",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "source",
+          "comment": ""
+        },
+        {
+          "fieldName": "sourcetype",
+          "owner": "BaseEvent",
+          "type": "string",
+          "fieldSearch": "",
+          "required": false,
+          "multivalue": false,
+          "hidden": false,
+          "editable": true,
+          "displayName": "sourcetype",
+          "comment": ""
+        }
+      ],
+      "calculations": [
+        {
+          "outputFields": [
+            {
+              "fieldName": "dest",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "dest",
+              "comment": ""
+            },
+            {
+              "fieldName": "hostname",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "hostname",
+              "comment": ""
+            },
+            {
+              "fieldName": "domain",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "domain",
+              "comment": ""
+            }
+          ],
+          "inputField": "ComputerName",
+          "calculationID": "p5ikvtha03",
+          "owner": "win",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "(?<dest>(?<hostname>[^\\.]+)\\.?(?<domain>[^\\n]+)?)"
+        },
+        {
+          "outputFields": [
+            {
+              "fieldName": "User",
+              "owner": "win",
+              "type": "string",
+              "fieldSearch": "",
+              "required": false,
+              "multivalue": false,
+              "hidden": false,
+              "editable": true,
+              "displayName": "User",
+              "comment": ""
+            }
+          ],
+          "inputField": "_raw",
+          "calculationID": "v2sgk61c15c",
+          "owner": "win",
+          "editable": true,
+          "comment": "",
+          "calculationType": "Rex",
+          "expression": "\\bUser: (?<User>[^\\n]+)"
+        }
+      ],
+      "constraints": [
+        { "search": "index=win_sysmon EventCode=3", "owner": "win" }
+      ],
+      "lineage": "win"
+    }
+  ],
+  "objectNameList": ["win"]
+}
+
